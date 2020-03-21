@@ -1,0 +1,26 @@
+{
+  "name": "CristinaIonas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kharkawy/cristinaionas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kharkawy/cristinaionas/issues"
+  },
+  "homepage": "https://github.com/kharkawy/cristinaionas#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
+  }
+}
