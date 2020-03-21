@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/kharkawy/cristinaionas#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "styles": "npx sass --watch src/styles/main.scss web/assets/main.css"
   },
   "dependencies": {
     "bootstrap": "^4.4.1"
