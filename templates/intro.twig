@@ -15,5 +15,16 @@
 				<img class="img-fluid intro-logo" src="{{ entry.introLogo.one.url }}" alt="Cristina Ionas logo">
 			</a>
 		</div>
+
+		{% if entry.introBackgroundColor %}
+			<style type="text/css">
+				.page-intro {
+					background: {{entry.introBackgroundColor.getHex()}}
+					;
+				}
+			</style>
+		{% endif %}
+
+
 	</body>
 </html>
