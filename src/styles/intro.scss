@@ -5,4 +5,12 @@
   .intro-logo-container {
     height: 100vh;
   }
+
+  .intro-logo {
+    transition: all 1s ease;
+  }
+
+  .intro-logo:hover {
+    transform: scale(1.1);
+  }
 }

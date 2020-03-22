@@ -14197,5 +14197,11 @@ h3 {
 .page-intro .intro-logo-container {
   height: 100vh;
 }
+.page-intro .intro-logo {
+  transition: all 1s ease;
+}
+.page-intro .intro-logo:hover {
+  transform: scale(1.1);
+}
 
 /*# sourceMappingURL=main.css.map */
