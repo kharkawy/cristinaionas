@@ -9943,4 +9943,18 @@ h3 {
   width: 70%;
 }
 
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  flex-grow: 1;
+  flex-basis: 50%;
+}
+.gallery-image img {
+  width: 100%;
+  height: auto;
+}
+
 /*# sourceMappingURL=main.css.map */

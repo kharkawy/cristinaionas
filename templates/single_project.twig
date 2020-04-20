@@ -1,0 +1,15 @@
+{% extends "layout.twig" %} {% block content %}
+<h1>Hello</h1>
+<p>I am your projects page - {{ entry.title }}</p>
+<div class="gallery-container">
+  <div class="gallery-image">
+    <img src="{{ entry.headerImage.one.url }}" alt="" />
+  </div>
+  <div class="gallery-image">
+    <img src="{{ entry.headerImage.one.url }}" alt="" />
+  </div>
+  <div class="gallery-image">
+    <img src="{{ entry.headerImage.one.url }}" alt="" />
+  </div>
+</div>
+{% endblock %}

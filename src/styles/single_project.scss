@@ -1,0 +1,16 @@
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  flex-grow: 1;
+  flex-basis: 50%;
+
+  // TODO: Add a breakpoint and transition to one-column layout
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
