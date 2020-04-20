@@ -13,14 +13,14 @@
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: black;
+    color: rgb(49, 49, 49);
     position: relative;
     overflow: hidden;
   }
 
   .nav-item:not(.active)::before {
     content: "";
-    background-color: rgb(215, 48, 63);
+    background-color: $violet;
     opacity: 0.7;
     width: 0;
     height: 10px;
@@ -29,7 +29,7 @@
     bottom: 5px;
     transform: translateY(-50%);
     left: -100%;
-    transition: 1s cubic-bezier(0.1, 0.9, 0.3, 1.3);
+    transition: 1s cubic-bezier(0.3, 0.5, 0.3, 1.3);
   }
 
   .nav-item:not(.active):hover::before {
@@ -38,25 +38,25 @@
   }
 
   .active {
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .active::before {
     content: "";
-    background-color: rgb(215, 48, 63);
+    background-color: $violet;
     opacity: 0.7;
-    width: 100%;
+    width: 75%;
     height: 10px;
     z-index: -999;
     position: absolute;
     bottom: 5px;
     transform: translateY(-50%);
-    left: 0;
-    transition: 1s cubic-bezier(0.1, 0.9, 0.3, 1.3);
+    left: 25%;
+    transition: 0.5s cubic-bezier(0.3, 0.5, 0.3, 0.9);
   }
 
   .active:hover::before {
-    left: 30%;
-    width: 70%;
+    left: 50%;
+    width: 50%;
   }
 }

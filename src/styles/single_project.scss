@@ -1,16 +1,104 @@
+.project-header-img {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+  @include lg {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+  @include xl {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+}
+
+.project-description {
+  margin: 100px auto;
+  padding: 0 20px;
+  width: auto;
+  max-width: 600px;
+  font-family: "Questrial", sans-serif;
+  color: rgb(49, 49, 49);
+  h1 {
+    font-weight: bold;
+    font-size: 76px;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 54%,
+      rgb(211, 212, 241) 54%
+    );
+  }
+  a:hover {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 54%,
+      rgb(237, 238, 255) 54%
+    );
+  }
+
+  ::selection {
+    color: white;
+    background: $violet;
+  }
+
+  @include xs {
+    margin: 50px auto;
+    h1 {
+      font-size: 47px;
+    }
+  }
+
+  @include sm {
+    margin: 50px auto;
+    h1 {
+      font-size: 47px;
+    }
+  }
+}
+
 .gallery-container {
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @include xs {
+    flex-direction: column;
+  }
+
+  @include sm {
+    flex-direction: column;
+  }
+
+  @include md {
+    flex-direction: column;
+  }
 }
 
 .gallery-image {
-  flex-grow: 1;
+  flex-grow: 0;
   flex-basis: 50%;
-
-  // TODO: Add a breakpoint and transition to one-column layout
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }

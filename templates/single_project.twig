@@ -1,15 +1,36 @@
-{% extends "layout.twig" %} {% block content %}
-<h1>Hello</h1>
-<p>I am your projects page - {{ entry.title }}</p>
-<div class="gallery-container">
-  <div class="gallery-image">
-    <img src="{{ entry.headerImage.one.url }}" alt="" />
-  </div>
-  <div class="gallery-image">
-    <img src="{{ entry.headerImage.one.url }}" alt="" />
-  </div>
-  <div class="gallery-image">
-    <img src="{{ entry.headerImage.one.url }}" alt="" />
-  </div>
-</div>
+{% extends "layout.twig" %}
+{% block content %}
+
+	<div class="project-header-img" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>
+
+	<div class="corpo">
+		<h1>
+			Title 1</h1>
+	</div>
+
+	<div class="corpo">
+		<h1>
+			Title 2</h1>
+	</div>
+
+	<div class="corpo">
+		<h1>
+			Title 3</h1>
+	</div>
+
+	<div class="project-description">
+		<h1>{{ entry.title }}</h1>
+		{{ entry.projectDescription }}
+	</div>
+
+	<div class="gallery-container">
+		{% set projectGallery = entry.projectGallery.all()  %}
+		{% if projectGallery|length %}
+			{% for img in projectGallery %}
+				<div class="gallery-image">
+					<img src="{{ img.url }}" alt="{{ img.filename }}">
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
 {% endblock %}
