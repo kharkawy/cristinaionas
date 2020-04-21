@@ -10049,4 +10049,15 @@ body {
   object-fit: cover;
 }
 
+.footer {
+  margin: 25px auto;
+}
+.footer .footer-copyright {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: #646464;
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
