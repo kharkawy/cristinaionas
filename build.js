@@ -1,5 +1,7 @@
+//File System module for Node.js
 const fs = require("fs");
 
+//Copying files from node modules location to web location
 fs.copyFile(
   "./node_modules/bootstrap/dist/js/bootstrap.min.js",
   "./web/assets/scripts/boostrap.js",
