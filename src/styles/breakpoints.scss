@@ -15,12 +15,26 @@ $screen-md-max: 991.98px;
 $screen-lg-min: 992px;
 $screen-lg-max: 1199.98px;
 
-//Desktop
+//Bigger desktops
 $screen-xl-min: 1200px;
 
 //Mixins
 
-// Extra mall devices
+//Mobile general
+@mixin mobile {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+//Desktop general
+@mixin desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra small devices
 @mixin xs {
   @media (max-width: #{$screen-xs-max}) {
     @content;

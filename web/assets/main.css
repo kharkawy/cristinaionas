@@ -9900,51 +9900,74 @@ body {
   height: 50px;
 }
 .main-nav .nav-item {
-  margin-right: 50px;
   font-family: "Questrial", sans-serif;
-  font-size: 16px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #313131;
   position: relative;
   overflow: hidden;
 }
-.main-nav .nav-item:not(.active)::before {
-  content: "";
-  background-color: #d3d4f1;
-  opacity: 0.7;
-  width: 0;
-  height: 10px;
-  z-index: -999;
-  position: absolute;
-  bottom: 5px;
-  transform: translateY(-50%);
-  left: -100%;
-  transition: 1s cubic-bezier(0.3, 0.5, 0.3, 1.3);
+@media (max-width: 991.98px) {
+  .main-nav .navbar-nav {
+    font-size: 20px;
+    height: calc(100vh - 76px);
+    position: relative;
+  }
+  .main-nav .navbar-nav .navbar-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main-nav .nav-item {
+    text-align: center;
+  }
 }
-.main-nav .nav-item:not(.active):hover::before {
-  left: 25%;
-  width: 75%;
-}
-.main-nav .active {
-  font-weight: normal;
-}
-.main-nav .active::before {
-  content: "";
-  background-color: #d3d4f1;
-  opacity: 0.7;
-  width: 75%;
-  height: 10px;
-  z-index: -999;
-  position: absolute;
-  bottom: 5px;
-  transform: translateY(-50%);
-  left: 25%;
-  transition: 0.5s cubic-bezier(0.3, 0.5, 0.3, 0.9);
-}
-.main-nav .active:hover::before {
-  left: 50%;
-  width: 50%;
+@media (min-width: 992px) {
+  .main-nav .navbar-container {
+    display: inherit;
+  }
+  .main-nav .nav-item {
+    margin-right: 50px;
+    font-size: 16px;
+  }
+  .main-nav .nav-item:not(.active)::before {
+    content: "";
+    background-color: #d3d4f1;
+    opacity: 0.7;
+    width: 0;
+    height: 10px;
+    z-index: -999;
+    position: absolute;
+    bottom: 5px;
+    transform: translateY(-50%);
+    left: -100%;
+    transition: 1s cubic-bezier(0.3, 0.5, 0.3, 1.3);
+  }
+  .main-nav .nav-item:not(.active):hover::before {
+    left: 25%;
+    width: 75%;
+  }
+  .main-nav .active {
+    font-weight: normal;
+  }
+  .main-nav .active::before {
+    content: "";
+    background-color: #d3d4f1;
+    opacity: 0.7;
+    width: 75%;
+    height: 10px;
+    z-index: -999;
+    position: absolute;
+    bottom: 5px;
+    transform: translateY(-50%);
+    left: 25%;
+    transition: 0.5s cubic-bezier(0.3, 0.5, 0.3, 0.9);
+  }
+  .main-nav .active:hover::before {
+    left: 50%;
+    width: 50%;
+  }
 }
 
 .project-header-img {
@@ -10050,7 +10073,8 @@ body {
 }
 
 .footer {
-  margin: 25px auto;
+  margin: 0 auto;
+  padding: 25px 0;
 }
 .footer .footer-copyright {
   margin: 0;

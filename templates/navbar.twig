@@ -1,5 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg main-nav">
-	<a class="navbar-brand" href="/home">
+
+	<a class="navbar-brand" href="/cristina/home">
 		<img class="navbar-logo" src="{{ navbar.navbarLogo.one.url }}"/>
 	</a>
 
@@ -9,13 +10,14 @@
 
 	<div class="collapse navbar-collapse justify-content-end">
 		<div class="navbar-nav">
-			<a class="nav-item nav-link {{ entry.uri == 'projects' or entry.type == 'project' ? 'active' : ''}}" href="projects">Projects</a>
-			<a class="nav-item nav-link {{ entry.uri == 'about' ? 'active' : '' }}" href="#">About</a>
-			<a class="nav-item nav-link {{ entry.uri == 'contact' ? 'active' : '' }}" href="#">Contact</a>
+			<div class="navbar-container">
+				<a class="nav-item nav-link {{ entry.uri == 'projects' or entry.type == 'project' ? 'active' : ''}}" href="projects">Projects</a>
+				<a class="nav-item nav-link {{ entry.uri == 'about' ? 'active' : '' }}" href="#">About</a>
+				<a class="nav-item nav-link {{ entry.uri == 'contact' ? 'active' : '' }}" href="#">Contact</a>
+			</div>
 		</div>
 	</div>
 </nav>
-
 {% if navbar.navbarBackgroundColor %}
 	<style type="text/css">
 		.main-nav {
