@@ -1,0 +1,16 @@
+{% extends "layout.twig" %}
+{% block content %}
+	<div class="projects-overview">
+		{% set entries = craft.entries.section('projects').all() %}
+		{% for entry in entries %}
+			<div class="project-thumbnail">
+				<div class="background" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>
+				<div class="titles">
+					<h3>Illustration</h3>
+					<h2 class="project-title">{{ entry.title }}</h2>
+				</div>
+
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
