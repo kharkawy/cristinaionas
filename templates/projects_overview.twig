@@ -3,13 +3,15 @@
 	<div class="projects-overview">
 		{% set entries = craft.entries.section('projects').all() %}
 		{% for entry in entries %}
-			<div class="project-thumbnail">
-				<div class="background" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>
-				<div class="titles">
-					<h3>Illustration</h3>
-					<h2 class="project-title">{{ entry.title }}</h2>
-				</div>
 
+			<div class="project-thumbnail">
+				<a href="{{ entry.url }}">
+					<div class="background" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>
+					<div class="titles">
+						<h3 class="project-type">{{ entry.projectType }}</h3>
+						<h2 class="project-title">{{ entry.title }}</h2>
+					</div>
+				</a>
 			</div>
 		{% endfor %}
 	</div>

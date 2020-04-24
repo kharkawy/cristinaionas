@@ -1,6 +1,10 @@
+@import url("https://use.typekit.net/oxz2xza.css");
+
 .projects-overview {
   display: flex;
   flex-wrap: wrap;
+  max-width: $max-img-width;
+  margin: 0 auto;
 
   .project-thumbnail {
     flex-grow: 0;
@@ -8,6 +12,11 @@
     height: 50vh;
     position: relative;
     overflow: hidden;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
     .background {
       height: 100%;
@@ -18,7 +27,7 @@
       transition: all 0.5s ease-in-out;
       opacity: 0.5;
     }
-    .background:hover {
+    a:hover > .background {
       transform: scale(1.05);
       opacity: 0.8;
     }
@@ -30,21 +39,25 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgb(255, 255, 255);
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     }
 
     .project-title {
       text-transform: uppercase;
-      font-size: 70px;
-      font-weight: 800;
-      //   color: transparent;
-      //   -webkit-text-stroke-width: 2px;
-      //   -webkit-text-stroke-color: white;
+      font-size: 50px;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      margin: 0;
+      letter-spacing: -1px;
     }
 
-    h3 {
-      font-size: 20px;
-      font-style: italic;
+    .project-type {
+      font-family: itc-galliard, serif;
       font-weight: 400;
+      font-style: italic;
+      font-size: 30px;
+      margin: 0;
     }
   }
 
