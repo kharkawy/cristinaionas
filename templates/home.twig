@@ -1,4 +1,23 @@
 {% extends "layout.twig" %}
+
 {% block content %}
-	<img src="https://d33wubrfki0l68.cloudfront.net/021b3b0236bd2202cfe72530597ca5c354dd5c8f/813ce/poze/princess.png" alt="" width="100%">
+	<div class="featured-projects">
+		{% set entryQuery = entry.projectsFeatured %}
+		{% set entries = entryQuery.all() %}
+		{% for entry in entries %}
+			<div class="project-thumbnail" style="background-color: {{ entry.backgroundColor }};">
+				<div class="test">
+					<a href="{{ entry.url }}">
+						<div class="project-image-container">
+							<div class="project-image" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>
+						</div>
+						<div class="titles" style="color: {{ entry.backgroundColor }};">
+							<h3 class="project-type">{{ entry.projectType }}</h3>
+							<h2 class="project-title">{{ entry.title }}</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}
