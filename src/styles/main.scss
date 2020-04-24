@@ -3,12 +3,16 @@
 body {
   overflow-x: hidden;
 }
-$violet: rgb(211, 212, 241);
-$light-violet: rgb(237, 238, 255);
+
+$highlither-color: rgba(141, 141, 141, 1);
+
+$max-img-width: 1920px;
 
 @import "breakpoints";
 @import "intro";
+@import "home";
 @import "navbar";
 @import "single_project";
 @import "projects_overview";
+@import "projects_overview2";
 @import "footer";
