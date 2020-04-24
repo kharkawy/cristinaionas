@@ -9970,6 +9970,87 @@ body {
   margin-top: 0;
 }
 
+.about-header-img {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-header-img {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+}
+@media (min-width: 1200px) {
+  .about-header-img {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+}
+
+.about-description {
+  margin: 100px auto;
+  padding: 0 20px;
+  width: auto;
+  max-width: 700px;
+  color: #313131;
+}
+.about-description h1 {
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 76px;
+  margin-bottom: 50px;
+}
+.about-description p {
+  max-width: 600px;
+  font-family: franklin-gothic-urw, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 34px;
+}
+.about-description h2,
+.about-description h3,
+.about-description h4,
+.about-description h5,
+.about-description h6 {
+  font-family: franklin-gothic-urw, sans-serif;
+}
+.about-description a {
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+}
+.about-description a:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+}
+.about-description ::selection {
+  color: white;
+  background: #8d8d8d;
+}
+@media (max-width: 479.98px) {
+  .about-description {
+    margin: 50px auto;
+  }
+  .about-description h1 {
+    font-size: 47px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .about-description {
+    margin: 50px auto;
+  }
+  .about-description h1 {
+    font-size: 47px;
+  }
+}
+
 .main-nav {
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
 }

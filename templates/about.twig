@@ -1,0 +1,9 @@
+{% extends "layout" %}
+{% block content %}
+	<div class="about-header-img" style="background-image: url('{{ entry.aboutHeaderImage.one.url }}');"></div>
+
+	<div class="about-description">
+		<h1>{{ entry.aboutTitle }}</h1>
+		{{ entry.aboutDescription }}
+	</div>
+{% endblock %}
