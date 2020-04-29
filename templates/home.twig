@@ -6,7 +6,7 @@
 		{% set entries = entryQuery.all() %}
 		{% for entry in entries %}
 			<div class="project-thumbnail" style="background-color: {{ entry.backgroundColor }};">
-				<div class="test">
+				<div class="project-thumbnail-content">
 					<a href="{{ entry.url }}">
 						<div class="project-image-container">
 							<div class="project-image" style="background-image: url('{{ entry.headerImage.one.url }}');"></div>

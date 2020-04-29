@@ -1,10 +1,16 @@
 .featured-projects {
   .project-thumbnail {
+    // max-width: 1920px;
+    // margin: 0 auto;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include xs {
+      height: 75vh;
+    }
 
     a {
       color: inherit;
@@ -15,15 +21,19 @@
       text-decoration: none;
     }
 
-    .test {
+    .project-thumbnail-content {
       margin: 0 auto;
     }
 
     .titles {
       display: block;
       position: sticky;
-      bottom: 40%;
+      bottom: 35%;
       text-align: center;
+
+      @include xs {
+        bottom: 50%;
+      }
     }
 
     .project-title {
@@ -45,15 +55,31 @@
     }
 
     .project-image-container {
-      margin-top: 10vh;
+      padding-top: 100px;
       display: block;
       overflow: hidden;
       width: 60vw;
-      height: 70vh;
+      height: 40vw;
+      max-width: 1600px;
+      max-height: 1066px;
 
-      @include mobile {
+      @include xs {
+        padding-top: 0;
+        margin-top: 100px;
         width: 100vw;
-        height: 50vh;
+        height: 66vw;
+      }
+      @include sm {
+        padding-top: 0;
+        margin-top: 100px;
+        width: 100vw;
+        height: 66vw;
+      }
+      @include md {
+        padding-top: 0;
+        margin-top: 100px;
+        width: 100vw;
+        height: 66vw;
       }
 
       .project-image {
@@ -66,16 +92,16 @@
       }
     }
 
-    .test:hover .project-image {
+    .project-thumbnail-content:hover .project-image {
       transform: scale(1.05);
     }
 
-    @include mobile {
+    @include xs {
       .project-title {
         font-size: 30px;
       }
       .project-type {
-        font-size: 20px;
+        font-size: 25px;
       }
     }
   }

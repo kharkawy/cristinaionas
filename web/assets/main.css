@@ -9897,10 +9897,15 @@ body {
 
 .featured-projects .project-thumbnail {
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 479.98px) {
+  .featured-projects .project-thumbnail {
+    height: 75vh;
+  }
 }
 .featured-projects .project-thumbnail a {
   color: inherit;
@@ -9909,14 +9914,19 @@ body {
   color: inherit;
   text-decoration: none;
 }
-.featured-projects .project-thumbnail .test {
+.featured-projects .project-thumbnail .project-thumbnail-content {
   margin: 0 auto;
 }
 .featured-projects .project-thumbnail .titles {
   display: block;
   position: sticky;
-  bottom: 40%;
+  bottom: 35%;
   text-align: center;
+}
+@media (max-width: 479.98px) {
+  .featured-projects .project-thumbnail .titles {
+    bottom: 50%;
+  }
 }
 .featured-projects .project-thumbnail .project-title {
   text-transform: uppercase;
@@ -9935,16 +9945,36 @@ body {
   font-size: 30px;
 }
 .featured-projects .project-thumbnail .project-image-container {
-  margin-top: 10vh;
+  padding-top: 100px;
   display: block;
   overflow: hidden;
   width: 60vw;
-  height: 70vh;
+  height: 40vw;
+  max-width: 1600px;
+  max-height: 1066px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 479.98px) {
   .featured-projects .project-thumbnail .project-image-container {
+    padding-top: 0;
+    margin-top: 100px;
     width: 100vw;
-    height: 50vh;
+    height: 66vw;
+  }
+}
+@media (min-width: 480px) and (max-width: 767.98px) {
+  .featured-projects .project-thumbnail .project-image-container {
+    padding-top: 0;
+    margin-top: 100px;
+    width: 100vw;
+    height: 66vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .featured-projects .project-thumbnail .project-image-container {
+    padding-top: 0;
+    margin-top: 100px;
+    width: 100vw;
+    height: 66vw;
   }
 }
 .featured-projects .project-thumbnail .project-image-container .project-image {
@@ -9955,15 +9985,15 @@ body {
   background-size: cover;
   transition: all 0.5s ease-in-out;
 }
-.featured-projects .project-thumbnail .test:hover .project-image {
+.featured-projects .project-thumbnail .project-thumbnail-content:hover .project-image {
   transform: scale(1.05);
 }
-@media (max-width: 991.98px) {
+@media (max-width: 479.98px) {
   .featured-projects .project-thumbnail .project-title {
     font-size: 30px;
   }
   .featured-projects .project-thumbnail .project-type {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 .featured-projects .project-thumbnail:first-child .project-image-container {
