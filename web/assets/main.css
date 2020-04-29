@@ -10054,14 +10054,14 @@ body {
 .about-description a {
   text-decoration: none;
   color: inherit;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, rgba(255, 58, 60, 0.9) 54%);
 }
 .about-description a:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, rgba(255, 58, 60, 0.9) 54%);
 }
 .about-description ::selection {
   color: white;
-  background: #8d8d8d;
+  background: rgba(255, 58, 60, 0.9);
 }
 @media (max-width: 479.98px) {
   .about-description {
@@ -10122,8 +10122,7 @@ body {
   }
   .main-nav .nav-item:not(.active)::before {
     content: "";
-    background-color: #8d8d8d;
-    opacity: 0.7;
+    background-color: rgba(255, 58, 60, 0.9);
     width: 0;
     height: 10px;
     z-index: -999;
@@ -10142,8 +10141,7 @@ body {
   }
   .main-nav .active::before {
     content: "";
-    background-color: #8d8d8d;
-    opacity: 0.7;
+    background-color: rgba(255, 58, 60, 0.9);
     width: 75%;
     height: 10px;
     z-index: -999;
@@ -10212,16 +10210,17 @@ body {
   font-family: franklin-gothic-urw, sans-serif;
 }
 .project-description a {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
 }
 .project-description a:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, #8d8d8d 54%);
+  color: rgba(255, 58, 60, 0.9);
 }
 .project-description ::selection {
   color: white;
-  background: #8d8d8d;
+  background: rgba(255, 58, 60, 0.9);
 }
 @media (max-width: 479.98px) {
   .project-description {

@@ -50,20 +50,13 @@
   }
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 54%,
-      $highlither-color 54%
-    );
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
   }
   a:hover {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 54%,
-      $highlither-color 54%
-    );
+    color: $highlither-color;
   }
 
   ::selection {

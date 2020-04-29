@@ -48,7 +48,6 @@
     .nav-item:not(.active)::before {
       content: "";
       background-color: $highlither-color;
-      opacity: 0.7;
       width: 0;
       height: 10px;
       z-index: -999;
@@ -71,7 +70,6 @@
     .active::before {
       content: "";
       background-color: $highlither-color;
-      opacity: 0.7;
       width: 75%;
       height: 10px;
       z-index: -999;
