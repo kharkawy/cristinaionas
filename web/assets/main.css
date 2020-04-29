@@ -7,7 +7,6 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
 @import url("https://use.typekit.net/oxz2xza.css");
-@import url("https://use.typekit.net/oxz2xza.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10262,71 +10261,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.projects-overview {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.projects-overview .project-thumbnail {
-  flex-grow: 0;
-  flex-basis: 50%;
-  height: 50vh;
-  position: relative;
-  overflow: hidden;
-}
-.projects-overview .project-thumbnail a {
-  text-decoration: none;
-  color: black;
-}
-.projects-overview .project-thumbnail .background {
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition: all 0.5s ease-in-out;
-  opacity: 0.5;
-}
-.projects-overview .project-thumbnail a:hover > .background {
-  transform: scale(1.05);
-  opacity: 0.8;
-}
-.projects-overview .project-thumbnail .titles {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-.projects-overview .project-thumbnail .project-title {
-  text-transform: uppercase;
-  font-size: 50px;
-  font-family: franklin-gothic-urw, sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  margin: 0;
-  letter-spacing: -1px;
-}
-.projects-overview .project-thumbnail .project-type {
-  font-family: itc-galliard, serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 30px;
-  margin: 0;
-}
-@media (max-width: 991.98px) {
-  .projects-overview {
-    flex-direction: column;
-  }
-  .projects-overview .project-thumbnail {
-    flex-basis: unset;
-    height: 40vh;
-  }
 }
 
 .projects-overview2 {

@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/oxz2xza.css");
 
-.projects-overview2 {
+.projects-overview {
   display: flex;
   flex-wrap: wrap;
   max-width: $max-img-width;
@@ -12,9 +12,6 @@
     height: 50vh;
     position: relative;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
     a {
       text-decoration: none;
@@ -24,11 +21,15 @@
     .background {
       height: 100%;
       width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       transition: all 0.5s ease-in-out;
+      opacity: 0.5;
     }
-
     a:hover > .background {
-      background-color: transparent !important;
+      transform: scale(1.05);
+      opacity: 0.8;
     }
 
     .titles {
@@ -55,21 +56,22 @@
       font-family: itc-galliard, serif;
       font-weight: 400;
       font-style: italic;
+      font-size: 30px;
       margin: 0;
     }
   }
 
-  .project-thumbnail::before {
-    pointer-events: none;
-    position: absolute;
-    content: "";
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-  }
+  //   .project-thumbnail::before {
+  //     pointer-events: none;
+  //     position: absolute;
+  //     content: "";
+  //     display: block;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     background: rgba(255, 255, 255, 0.5);
+  //   }
 
   @include mobile {
     flex-direction: column;
