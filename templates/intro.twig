@@ -11,20 +11,19 @@
 	</head>
 	<body class="page-intro">
 		<div class="container d-flex flex-column justify-content-center intro-logo-container">
-			<a href="home" class="">
+			<a href="home">
 				<img class="img-fluid intro-logo" src="{{ entry.introLogo.one.url }}" alt="Cristina Ionas logo">
+
 			</a>
+
 		</div>
-
-		{% if entry.introBackgroundColor %}
-			<style type="text/css">
-				.page-intro {
-					background: {{entry.introBackgroundColor.getHex()}}
-					;
-				}
-			</style>
-		{% endif %}
-
-
 	</body>
 </html>
+{% if entry.introBackgroundColor %}
+	<style type="text/css">
+		.page-intro {
+			background: {{entry.introBackgroundColor.getHex()}}
+			;
+		}
+	</style>
+{% endif %}
