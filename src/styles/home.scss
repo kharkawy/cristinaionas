@@ -1,111 +1,139 @@
-.featured-projects {
-  .project-thumbnail {
-    // max-width: 1920px;
-    // margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.projects-feed {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-    @include xs {
-      height: 75vh;
+  .projects-feed_item {
+    height: calc(100vh - 76px);
+    position: relative;
+
+    .projects-feed_background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
     }
 
-    a {
-      color: inherit;
-    }
+    .projects-feed_project {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-    a:hover {
-      color: inherit;
-      text-decoration: none;
-    }
+      margin: auto;
+      width: 100%;
+      max-width: 1100px;
+      padding: 5px;
 
-    .project-thumbnail-content {
-      margin: 0 auto;
-    }
+      @include desktop {
+        width: 110vh;
+        padding: 0;
+      }
 
-    .titles {
-      display: block;
-      position: sticky;
-      bottom: 35%;
-      text-align: center;
+      .projects-feed_project-cover-container {
+        position: relative;
+        overflow: hidden;
+        max-height: 600px;
+        padding-top: 80%;
 
-      @include xs {
-        bottom: 50%;
+        @include desktop {
+          padding-top: 56%;
+        }
+
+        .projects-feed_project-cover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.5s ease;
+        }
+      }
+
+      .projects-feed_project-cover-container:hover
+        .projects-feed_project-cover {
+        transform: scale(1.05);
       }
     }
 
-    .project-title {
+    .projects-feed_titles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .projects-feed_titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        max-width: 650px;
+        position: sticky;
+        top: 40vh;
+        overflow: hidden;
+        margin: auto;
+
+        .project-type {
+          font-family: itc-galliard, serif;
+          font-weight: 400;
+          font-style: italic;
+          font-size: 1.5em;
+          margin: 0;
+        }
+
+        .project-title {
+          text-transform: uppercase;
+          font-size: 2em;
+          font-family: franklin-gothic-urw, sans-serif;
+          font-weight: 900;
+          font-style: normal;
+          margin: 0;
+          letter-spacing: -1px;
+          line-height: 1em;
+        }
+      }
+    }
+  }
+
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+
+    a .cta-text {
+      color: rgb(49, 49, 49);
+      text-decoration: underline;
+      text-align: center;
       text-transform: uppercase;
-      font-size: 50px;
+      font-size: 1.5em;
       font-family: franklin-gothic-urw, sans-serif;
       font-weight: 900;
       font-style: normal;
       margin: 0;
       letter-spacing: -1px;
-    }
+      line-height: 1em;
+      transition: all 0.5s ease;
 
-    .project-type {
-      font-family: itc-galliard, serif;
-      font-weight: 400;
-      font-style: italic;
-      margin: 0;
-      font-size: 30px;
-    }
-
-    .project-image-container {
-      padding-top: 100px;
-      display: block;
-      overflow: hidden;
-      width: 60vw;
-      height: 40vw;
-      max-width: 1600px;
-      max-height: 1066px;
-
-      @include xs {
-        padding-top: 0;
-        margin-top: 100px;
-        width: 100vw;
-        height: 66vw;
-      }
-      @include sm {
-        padding-top: 0;
-        margin-top: 100px;
-        width: 100vw;
-        height: 66vw;
-      }
-      @include md {
-        padding-top: 0;
-        margin-top: 100px;
-        width: 100vw;
-        height: 66vw;
-      }
-
-      .project-image {
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        transition: all 0.5s ease-in-out;
+      @include desktop {
+        font-size: 3em;
       }
     }
 
-    .project-thumbnail-content:hover .project-image {
-      transform: scale(1.05);
+    a:hover {
+      text-decoration: none;
     }
-
-    @include xs {
-      .project-title {
-        font-size: 30px;
-      }
-      .project-type {
-        font-size: 25px;
-      }
+    a:hover .cta-text {
+      color: $highlither-color;
     }
-  }
-  .project-thumbnail:first-child .project-image-container {
-    margin-top: 0;
   }
 }
