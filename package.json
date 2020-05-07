@@ -16,13 +16,21 @@
   "homepage": "https://github.com/kharkawy/cristinaionas#readme",
   "scripts": {
     "styles": "npx sass --watch src/styles/main.scss web/assets/main.css",
-    "scripts": "node ./build.js"
+    "scripts": "node ./build.js",
+    "autoprefixer": "npx postcss web/assets/main.css --use autoprefixer -replace"
   },
   "dependencies": {
     "@popperjs/core": "^2.3.3",
+    "autoprefixer": "^9.7.6",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "postcss-cli": "^7.1.1"
   },
+  "browserslist": [
+    "last 4 version",
+    "> 1%",
+    "IE 10"
+  ],
   "devDependencies": {
     "sass": "^1.26.3"
   }
