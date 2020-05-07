@@ -1,18 +1,14 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://use.typekit.net/oxz2xza.css");
 
-body {
-  overflow-x: hidden;
-}
-
-$highlither-color: rgba(255, 58, 60, 0.9);
-
-$max-img-width: 1920px;
-
+@import "variables";
 @import "breakpoints";
+
 @import "intro";
-@import "about";
+@import "general";
 @import "navbar";
-@import "home";
-@import "single_project";
-@import "projects_overview";
 @import "footer";
+@import "home";
+@import "projects_overview";
+@import "single_project";
+@import "about";
