@@ -1,0 +1,90 @@
+.projects-overview {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: $max-img-width;
+
+  .project-thumbnail {
+    position: relative;
+    flex-basis: 50%;
+    flex-grow: 0;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
+
+    .background {
+      height: 100%;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+    }
+
+    a:hover > .background {
+      background-color: transparent !important;
+    }
+
+    .titles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      color: rgb(255, 255, 255);
+    }
+
+    .project-title {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    .project-type {
+      margin: 0;
+      font-family: itc-galliard, serif;
+      font-size: 25px;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    @include xs {
+      .project-title {
+        letter-spacing: 0;
+        font-size: 25px;
+      }
+      .project-type {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .project-thumbnail::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    .project-thumbnail {
+      flex-basis: unset;
+      height: 40vh;
+    }
+  }
+}

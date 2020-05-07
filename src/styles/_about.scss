@@ -1,0 +1,74 @@
+.about-header-img {
+  margin: 0 auto;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  max-width: $max-img-width;
+  height: 50vh;
+
+  @include lg {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+  @include xl {
+    background-attachment: fixed;
+    height: 65vh;
+  }
+}
+
+.about-description {
+  margin: 100px auto;
+  padding: 0 20px;
+  width: auto;
+  max-width: 700px;
+  color: $black;
+
+  h1 {
+    margin-bottom: 50px;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-size: 76px;
+    font-style: normal;
+    font-weight: 900;
+  }
+  p {
+    max-width: 600px;
+    line-height: 34px;
+    font-family: franklin-gothic-urw, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: franklin-gothic-urw, sans-serif;
+  }
+
+  a {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, $red 54%);
+    text-decoration: none;
+    color: inherit;
+  }
+  a:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 54%, $red 54%);
+  }
+
+  @include xs {
+    margin: 50px auto;
+    h1 {
+      font-size: 47px;
+    }
+  }
+
+  @include sm {
+    margin: 50px auto;
+    h1 {
+      font-size: 47px;
+    }
+  }
+}

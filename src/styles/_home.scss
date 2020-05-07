@@ -1,0 +1,138 @@
+.projects-feed {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .projects-feed_item {
+    position: relative;
+    height: calc(100vh - 76px);
+
+    .projects-feed_background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .projects-feed_project {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding: 5px;
+      width: 100%;
+      max-width: 1100px;
+
+      @include desktop {
+        padding: 0;
+        width: 110vh;
+      }
+
+      .projects-feed_project-cover-container {
+        position: relative;
+        padding-top: 80%;
+        max-height: 600px;
+        overflow: hidden;
+
+        @include desktop {
+          padding-top: 56%;
+        }
+
+        .projects-feed_project-cover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.5s ease;
+        }
+      }
+
+      .projects-feed_project-cover-container:hover
+        .projects-feed_project-cover {
+        transform: scale(1.05);
+      }
+    }
+
+    .projects-feed_titles-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .projects-feed_titles {
+        display: flex;
+        position: sticky;
+        top: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        max-width: 650px;
+        overflow: hidden;
+        text-align: center;
+
+        .project-type {
+          margin: 0;
+          font-family: itc-galliard, serif;
+          font-weight: 400;
+          font-size: 1.5em;
+          font-style: italic;
+        }
+
+        .project-title {
+          margin: 0;
+          text-transform: uppercase;
+          line-height: 1em;
+          letter-spacing: -1px;
+          font-family: franklin-gothic-urw, sans-serif;
+          font-weight: 900;
+          font-size: 2em;
+          font-style: normal;
+        }
+      }
+    }
+  }
+
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+
+    a .cta-text {
+      margin: 0;
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+      line-height: 1em;
+      letter-spacing: -1px;
+      color: $black;
+      font-family: franklin-gothic-urw, sans-serif;
+      font-weight: 900;
+      font-size: 1.5em;
+      font-style: normal;
+      transition: all 0.5s ease;
+
+      @include desktop {
+        font-size: 3em;
+      }
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+    a:hover .cta-text {
+      color: $red;
+    }
+  }
+}

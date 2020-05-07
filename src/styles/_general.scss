@@ -1,0 +1,8 @@
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: $red;
+  color: rgba(255, 255, 255, 1);
+}

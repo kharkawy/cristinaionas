@@ -1,0 +1,70 @@
+//Breakpoints
+
+//Smartphones
+$screen-xs-max: 479.98px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 480px;
+$screen-sm-max: 767.98px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+$screen-md-max: 991.98px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+$screen-lg-max: 1199.98px;
+
+//Bigger desktops
+$screen-xl-min: 1200px;
+
+//Mixins
+
+//Mobile general
+@mixin mobile {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+//Desktop general
+@mixin desktop {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra small devices
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
