@@ -22,5 +22,5 @@ Make sure to install the following software on your local machine before proceed
 1. Run `npm install`
 
 ## Development
-Run `./craft serve` and click the link printed in the console
+Run `./craft serve` and click the link printed in the console.  
 Make sure to run `npm run styles` to have the SCSS files automatically compiled. 
